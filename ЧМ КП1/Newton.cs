@@ -10,11 +10,11 @@ class Newton : MethodBase
 
     public double DerivativeF(double x)
     {
-        return -Math.Sin(2*x)-Math.Sin(x)/2;
+        return -2 * Math.Sin(x) * Math.Cos(x) - Math.Sin(x) / 2;
     }
     public double DerivativeF2(double x)
     {
-        return -2*Math.Cos(2 * x) - Math.Cos(x) / 2;
+        return 2 * Math.Pow(Math.Sin(x), 2) * (-2 * Math.Pow(Math.Sin(x), 2)) - Math.Cos(x) / 2;
     }
 
     public double Сoincidence (double x)
@@ -28,6 +28,31 @@ class Newton : MethodBase
         while (Math.Abs(Function(x)) > eps)
         {
             x = x-Function(x)/DerivativeF(x);
+            return x;
+        }
+        throw new NotImplementedException();
+    }
+
+    public double Derivative2F(double x)
+    {
+        return -2*Math.Sin(x)*Math.Cos(x) - Math.Sin(x) / 3;
+    }
+    public double Derivative2F2(double x)
+    {
+        return 2 *Math.Pow(Math.Sin(x),2)*(-2 * Math.Pow(Math.Sin(x), 2)) - Math.Cos(x) / 3;
+    }
+
+    public double Сoincidence2(double x)
+    {
+        double kx = Function2(x) * Derivative2F2(x);
+        return kx;
+    }
+    public override double Method2(double a, double b, double eps)
+    {
+        double x = 1.3;
+        while (Math.Abs(Function2(x)) > eps)
+        {
+            x = x - Function2(x) / Derivative2F2(x);
             return x;
         }
         throw new NotImplementedException();
