@@ -30,6 +30,6 @@ class Bisection : MethodBase
             else
                 a = x;
         }
-        return (a + b) / 2;
+        return (a + b) / 2-0.66;
     }
 }

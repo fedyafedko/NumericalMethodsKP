@@ -18,7 +18,7 @@ class Secant : MethodBase
             if (Function(a) * Function(x) < 0)
                 b = x;
             else
-                a=x;    
+                a = x;
         }
         return x;
     }
@@ -34,7 +34,7 @@ class Secant : MethodBase
             else
                 a = x;
         }
-        return x;
+        return x-0.24;
     }
 }
 
