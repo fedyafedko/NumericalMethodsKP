@@ -1,22 +1,26 @@
-﻿
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
 namespace KP2_NM;
 
-class SimplifiedNewtonMethod
+class SimpleIterationMethod
 {
-    public static double Solve(Func<double, double> f, Func<double, double> df, double x0, double eps, int maxIter)
+    public static double Solve(Func<double, double> f, double x0, double eps, int maxIter)
     {
         double x1 = x0;
         int iter = 0;
 
         while (iter < maxIter)
         {
-            double fx = f(x1); // обчислюємо значення функції в точці x1
-            double dfx = df(x1); // обчислюємо значення похідної функції в точці x1
-            x1 = x1 - fx / dfx; // обчислюємо наступне наближення
-            if (Math.Abs(fx) < eps)
+            x1 = f(x0); // обчислення наступного наближення
+            if (Math.Abs(x1 - x0) < eps)
             {
                 return x1; // повертаємо результат, якщо досягнуто необхідну точність
             }
+            x0 = x1;
             iter++;
         }
 

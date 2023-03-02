@@ -1,51 +1,23 @@
-﻿
-namespace KP1;
+﻿namespace KP2_NM;
 
-class Newton : MethodBase
+class NewtonMethod 
 {
-    double x0 = 1.5;
-    public Newton(double min, double max) : base(min, max) { }
+    public static double Solve(Func<double, double> f, Func<double, double> df, double x0, double eps, int maxIter)
+    {
+        double x = x0; // початкове наближення
+        int iter = 0;
 
-    public override double Eps => Math.Pow(10, -4);
-
-    public double DerivativeF(double x)
-    {
-        return -2 * Math.Sin(x) * Math.Cos(x) - Math.Sin(x) / 2;
-    }
-    public double DerivativeF2(double x)
-    {
-        return 2 * Math.Pow(Math.Sin(x), 2) * (-2 * Math.Pow(Math.Sin(x), 2)) - Math.Cos(x) / 2;
-    }
-    public override double Method(double a, double b, double eps)
-    {
-        double x = x0;
-        while (Math.Abs(Function(x)) > eps)
+        while (iter < maxIter && Math.Abs(f(x)) > eps)
         {
-            x = x - Function(x) / DerivativeF(x);
-
-        }
-        return x;
-        throw new NotImplementedException();
-    }
-
-    public double Derivative2F(double x)
-    {
-        return -2 * Math.Sin(x) * Math.Cos(x) - Math.Sin(x) / 3;
-    }
-    public double Derivative2F2(double x)
-    {
-        return 2 * Math.Pow(Math.Sin(x), 2) * (-2 * Math.Pow(Math.Sin(x), 2)) - Math.Cos(x) / 3;
-    }
-
-    public override double Method2(double a, double b, double eps)
-    {
-        double x = 1.3;
-        while (Math.Abs(Function2(x)) > eps)
-        {
-            x = x - Function2(x) / Derivative2F2(x);
-            return x;
+            x = x - f(x) / df(x); // обчислюємо нову точку методом Ньютона
+            iter++;
         }
 
-        throw new NotImplementedException();
+        if (iter >= maxIter)
+        {
+            throw new Exception("Не вдалося знайти розв'язок з необхідною точністю за максимальну кількість ітерацій.");
+        }
+
+        return x; // повертаємо останнє наближення
     }
 }

@@ -1,0 +1,15 @@
+D:\Repository\NumericalMethodsKP\KP2_NM\KP2_NM\bin\Debug\net6.0\KP2_NM.exe
+D:\Repository\NumericalMethodsKP\KP2_NM\KP2_NM\bin\Debug\net6.0\KP2_NM.deps.json
+D:\Repository\NumericalMethodsKP\KP2_NM\KP2_NM\bin\Debug\net6.0\KP2_NM.runtimeconfig.json
+D:\Repository\NumericalMethodsKP\KP2_NM\KP2_NM\bin\Debug\net6.0\KP2_NM.dll
+D:\Repository\NumericalMethodsKP\KP2_NM\KP2_NM\bin\Debug\net6.0\KP2_NM.pdb
+D:\Repository\NumericalMethodsKP\KP2_NM\KP2_NM\obj\Debug\net6.0\KP2_NM.csproj.AssemblyReference.cache
+D:\Repository\NumericalMethodsKP\KP2_NM\KP2_NM\obj\Debug\net6.0\KP2_NM.GeneratedMSBuildEditorConfig.editorconfig
+D:\Repository\NumericalMethodsKP\KP2_NM\KP2_NM\obj\Debug\net6.0\KP2_NM.AssemblyInfoInputs.cache
+D:\Repository\NumericalMethodsKP\KP2_NM\KP2_NM\obj\Debug\net6.0\KP2_NM.AssemblyInfo.cs
+D:\Repository\NumericalMethodsKP\KP2_NM\KP2_NM\obj\Debug\net6.0\KP2_NM.csproj.CoreCompileInputs.cache
+D:\Repository\NumericalMethodsKP\KP2_NM\KP2_NM\obj\Debug\net6.0\KP2_NM.dll
+D:\Repository\NumericalMethodsKP\KP2_NM\KP2_NM\obj\Debug\net6.0\refint\KP2_NM.dll
+D:\Repository\NumericalMethodsKP\KP2_NM\KP2_NM\obj\Debug\net6.0\KP2_NM.pdb
+D:\Repository\NumericalMethodsKP\KP2_NM\KP2_NM\obj\Debug\net6.0\KP2_NM.genruntimeconfig.cache
+D:\Repository\NumericalMethodsKP\KP2_NM\KP2_NM\obj\Debug\net6.0\ref\KP2_NM.dll
